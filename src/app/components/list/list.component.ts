@@ -20,6 +20,7 @@ export class ListComponent implements OnInit {
       this.dataSvc.getResponse(i).subscribe(data => this.entitList.push(data.data));
       //console.log(this.entitList);
     }
+    console.log(this.entitList);
 
   }
 
