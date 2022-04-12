@@ -26,6 +26,9 @@
     <div class="img">
       <span>Logo</span>
     </div>
+    <div class="cell">
+      <span>Editar</span>
+    </div>
   </div>
   <div class="content" *ngFor="let entity of checkedList">
     <div class="container" *ngIf="!entity.validate">
@@ -84,6 +87,7 @@
     </div>
     <div>
       <input type="checkbox"(click)="toggleEditable(entity)">
+
     </div>
   </div>
 

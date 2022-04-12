@@ -1,5 +1,5 @@
 .table{
-  width: 90%;
+  width: 95%;
   margin:0 auto;
 
 }
@@ -7,29 +7,27 @@
 .header{
   display:flex;
   flex-direction: row;
-
-
 }
 
 
 .content{
-  display:flex;
-  flex-direction: row;
-
+  display: block;
+  width: 95%;
 }
 
 
 .cell{
-  width: 12.5%;
+  width: 11.11%;
   overflow: auto;
   text-align: center;
 }
 
 .img{
-  width: 25%;
+  width: 22.22%;
   text-align: center;
 }
 
 .container{
   display: flex;
+  flex-direction: row;
 }
