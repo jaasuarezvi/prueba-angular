@@ -13,6 +13,8 @@
     </div>
     <div class="cell">
       <span>Fecha de expiración</span>
+      <div class="button" (click)="sortDateDec(checkedList)"> Dec</div>
+      <div class="button" (click)="sortDateAsc(checkedList)"> ASC</div>
     </div>
     <div class="cell">
       <span>Nombre de contacto</span>
@@ -62,25 +64,25 @@
   </div>
   <div class="container" *ngIf="entity.validate">
     <div class="cell">
-      <input type="text" placeholder="{{entity.entityId}}" name="" #prueba>
+      <input type="text" placeholder="{{entity.entityId}}">
     </div>
     <div class="cell">
-      <span>{{entity.name}} </span>
+      <input type="text" placeholder="{{entity.name}}">
     </div>
     <div class="cell">
-      <span>{{entity.identificationNumber}} </span>
+      <input type="text" placeholder="{{entity.identificationNumber}}">
     </div>
     <div class="cell">
-      <span>{{entity.expirationDate}} </span>
+      <input type="text" placeholder="{{entity.expirationDate}}">
     </div>
     <div class="cell">
-      <span>{{entity.contactName}} </span>
+      <input type="text" placeholder="{{entity.contactName}}">
     </div>
     <div class="cell">
-      <span>{{entity.contactMail}} </span>
+      <input type="text" placeholder="{{entity.contactMail}}">
     </div>
     <div class="cell">
-      <span>{{entity.ipAddress}} </span>
+      <input type="text" placeholder="{{entity.ipAddress}}">
     </div>
     <div class="img">
       <img src="{{entity.logo}}" alt="">

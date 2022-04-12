@@ -41,6 +41,34 @@ export class DataComponent implements OnInit {
     console.log(data)
     return data
   }
+  sortDateDec(data:any){
+    data = data?.sort((a: { date: any; },b: { date: any; })=>{
+      const  x = (a.date || "").length >0 ? a.date: "a"
+      const  y = (b.date || "").length >0 ? b.date: "a"
+      if (x< y) return -1;
+      if (x> y) return 1;
+      else return 0;
+    }  )
+    console.log(data)
+    return data
+  }
+
+
+  sortDateAsc(data:any){
+    data = data?.sort((a: { date: any; },b: { date: any; })=>{
+      const  x = (a.date || "").length >0 ? a.date: "a"
+      const  y = (b.date || "").length >0 ? b.date: "a"
+      if (x< y) return 1;
+      if (x> y) return -1;
+      else return 0;
+    }  )
+    console.log(data)
+    return data
+  }
+
+
+
+
 
   toggleEditable(entity:EntityI){
 
