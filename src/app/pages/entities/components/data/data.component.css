@@ -1,0 +1,35 @@
+.table{
+  width: 90%;
+  margin:0 auto;
+
+}
+
+.header{
+  display:flex;
+  flex-direction: row;
+
+
+}
+
+
+.content{
+  display:flex;
+  flex-direction: row;
+
+}
+
+
+.cell{
+  width: 12.5%;
+  overflow: auto;
+  text-align: center;
+}
+
+.img{
+  width: 25%;
+  text-align: center;
+}
+
+.container{
+  display: flex;
+}

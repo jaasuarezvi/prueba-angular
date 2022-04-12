@@ -9,6 +9,7 @@ import { ServicesService } from '../../services/services.service';
 })
 export class TableComponent implements OnInit {
   entitList: EntityI[] = [];
+  checkedList: EntityI[]= [];
 
   constructor(private dataSvc: ServicesService) { }
 
@@ -18,5 +19,19 @@ export class TableComponent implements OnInit {
       this.dataSvc.getResponse(i).subscribe(data => this.entitList.push(data.data));
     }
   }
+  toggleCheckbox(item:EntityI){
+    if (this.checkedList.includes(item)) {
+      this.checkedList.forEach ((element,index) => {
+        if(element == item)  this.checkedList.splice(index,1)
+      })
+    }else{
+      this.checkedList.push(item)
+    }
+    this.entitList.forEach((element,index) =>{
+      element.validate=false;
+    } )
+  }
+
+
 
 }

@@ -7,4 +7,5 @@ export interface EntityI{
   contactMail:string;
   ipAddress: string;
   logo: string;
+  validate:boolean;
 }

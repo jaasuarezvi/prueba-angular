@@ -6,9 +6,11 @@
           <p>{{item.name}}</p>
         </div>
         <div class="row2">
-          <input type="checkbox">
+          <input type="checkbox"(click)="toggleCheckbox(item)">
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<app-data *ngIf="(checkedList || []).length>0" [checkedList]="checkedList"></app-data>

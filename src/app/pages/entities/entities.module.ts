@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { EntitiesComponent } from './entities.component';
 import { Routes,RouterModule } from '@angular/router';
 import { TableComponent } from './components/table/table.component';
+import { DataComponent } from './components/data/data.component';
 
 
 const routes:Routes= [{
@@ -22,6 +23,7 @@ pathMatch:'full'}
   declarations: [
     EntitiesComponent,
     TableComponent,
+    DataComponent,
 
   ],
   imports: [

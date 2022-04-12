@@ -1,0 +1,93 @@
+<div class="table">
+  <div class="header">
+    <div class="cell">
+      <span>ID</span>
+    </div>
+    <div class="cell">
+      <span>Nombre de entidad </span>
+      <div class="button" (click)="sortDec(checkedList)"> Dec</div>
+      <div class="button" (click)="sortAsc(checkedList)"> ASC</div>
+    </div>
+    <div class="cell">
+      <span>Número de identificación</span>
+    </div>
+    <div class="cell">
+      <span>Fecha de expiración</span>
+    </div>
+    <div class="cell">
+      <span>Nombre de contacto</span>
+    </div>
+    <div class="cell">
+      <span>Correo de contacto</span>
+    </div>
+    <div class="cell">
+      <span>Dirección IP</span>
+    </div>
+    <div class="img">
+      <span>Logo</span>
+    </div>
+  </div>
+  <div class="content" *ngFor="let entity of checkedList">
+    <div class="container" *ngIf="!entity.validate">
+    <div class="cell">
+      <span>{{entity.entityId}} </span>
+    </div>
+    <div class="cell">
+      <span>{{entity.name}} </span>
+    </div>
+    <div class="cell">
+      <span>{{entity.identificationNumber}} </span>
+    </div>
+    <div class="cell">
+      <span>{{entity.expirationDate}} </span>
+    </div>
+    <div class="cell">
+      <span>{{entity.contactName}} </span>
+    </div>
+    <div class="cell">
+      <span>{{entity.contactMail}} </span>
+    </div>
+    <div class="cell">
+      <span>{{entity.ipAddress}} </span>
+    </div>
+    <div class="img">
+      <img src="{{entity.logo}}" alt="">
+    </div>
+    <div>
+      <input type="checkbox"(click)="toggleEditable(entity)">
+    </div>
+  </div>
+  <div class="container" *ngIf="entity.validate">
+    <div class="cell">
+      <input type="text" placeholder="{{entity.entityId}}" name="" #prueba>
+    </div>
+    <div class="cell">
+      <span>{{entity.name}} </span>
+    </div>
+    <div class="cell">
+      <span>{{entity.identificationNumber}} </span>
+    </div>
+    <div class="cell">
+      <span>{{entity.expirationDate}} </span>
+    </div>
+    <div class="cell">
+      <span>{{entity.contactName}} </span>
+    </div>
+    <div class="cell">
+      <span>{{entity.contactMail}} </span>
+    </div>
+    <div class="cell">
+      <span>{{entity.ipAddress}} </span>
+    </div>
+    <div class="img">
+      <img src="{{entity.logo}}" alt="">
+    </div>
+    <div>
+      <input type="checkbox"(click)="toggleEditable(entity)">
+    </div>
+  </div>
+
+
+
+  </div>
+</div>
