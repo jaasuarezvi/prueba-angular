@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <div class="gallery">
+    <div class="item" *ngFor="let item of entitList ">
+      <div class="container" *ngIf="item.name">
+        <div class="row1">
+          <p>{{item.name}}</p>
+        </div>
+        <div class="row2">
+          <input type="checkbox">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
